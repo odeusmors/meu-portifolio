@@ -214,3 +214,30 @@ input:checked + .slider {
 input:checked + .slider:before {
   transform: translateX(24px);
 }
+
+section p {
+  max-width: 700px;
+}
+
+.card {
+  background: rgba(0,0,0,0.02);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+
+header {
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 1000;
+}
+body.dark header {
+  background: var(--bg-dark);
+}
