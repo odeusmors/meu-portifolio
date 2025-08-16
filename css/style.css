@@ -543,3 +543,24 @@ body.dark header {
         align-items: center;
     }
 }
+
+/* Banner Inicial */
+.banner-container {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 40px; /* espaçamento abaixo do banner */
+    border-radius: 12px; /* bordas arredondadas */
+}
+
+.banner-container .banner-image {
+    width: 100%;
+    height: auto; /* mantém a proporção original da imagem */
+    display: block;
+    object-fit: cover; /* cobre o container sem distorcer */
+    transition: transform 0.5s ease; /* efeito suave no hover */
+}
+
+.banner-container .banner-image:hover {
+    transform: scale(1.05); /* leve zoom ao passar o mouse */
+}
+
