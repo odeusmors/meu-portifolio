@@ -90,7 +90,8 @@ p {
 
 /* Botão toggle do menu */
 .menu-toggle {
-    display: none;  /* visível apenas no mobile */
+    display: none;
+    /* visível apenas no mobile */
     font-size: 1.5rem;
     background: none;
     border: none;
@@ -104,14 +105,16 @@ p {
     }
 
     .menu {
-        display: none;          /* escondido por padrão */
+        display: none;
+        /* escondido por padrão */
         position: absolute;
-        top: 60px;              /* ajusta conforme altura do header */
+        top: 60px;
+        /* ajusta conforme altura do header */
         right: 20px;
         background: var(--background);
         padding: 20px;
         border-radius: 8px;
-        box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
         flex-direction: column;
         gap: 15px;
         width: 200px;
@@ -134,7 +137,8 @@ p {
 /* Efeito hover */
 .menu a:hover {
     color: var(--primary);
-    transform: translateY(-2px); /* leve subida ao passar o mouse */
+    transform: translateY(-2px);
+    /* leve subida ao passar o mouse */
 }
 
 
@@ -178,6 +182,8 @@ body.dark .menu a:hover {
     font-size: 2rem;
 }
 
+
+
 .btn {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -188,7 +194,11 @@ body.dark .menu a:hover {
 }
 
 .projects h3 {
+    text-align: center;
     margin-top: 2rem;
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin-bottom: 12px;
 }
 
 .grid {
@@ -363,7 +373,6 @@ body.dark header {
 
 .texto-principal {
     font-size: 2.4rem;
-    font-family: 'Times New Roman', Times, serif;
     text-align: center;
     margin-bottom: 2rem;
 }
@@ -405,23 +414,25 @@ body.dark header {
     background: #000000;
     padding: 25px;
     border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
     width: 35%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Alinhamento em zigue-zague */
 .blog-detalhes .detalhe-item:nth-child(odd) {
-    align-self: flex-start; /* Esquerda */
+    align-self: flex-start;
+    /* Esquerda */
 }
 
 .blog-detalhes .detalhe-item:nth-child(even) {
-    align-self: flex-end; /* Direita */
+    align-self: flex-end;
+    /* Direita */
 }
 
 .blog-detalhes .detalhe-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
 }
 
 .blog-detalhes .detalhe-item h3 {
@@ -497,14 +508,14 @@ body.dark header {
     color: var(--text-color);
     padding: 10px 15px;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     font-weight: 500;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-item:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Contatos */
