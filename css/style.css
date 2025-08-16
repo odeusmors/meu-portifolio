@@ -194,6 +194,7 @@ body.dark .menu a:hover {
 }
 
 .projects h3 {
+    padding: 30px;
     text-align: center;
     margin-top: 2rem;
     font-size: 2.4rem;
@@ -564,3 +565,48 @@ body.dark header {
     transform: scale(1.05); /* leve zoom ao passar o mouse */
 }
 
+/* Zig-zag projetos */
+.projects .card.zigzag {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+    flex-wrap: wrap; /* empilha no mobile */
+}
+
+.projects .card.zigzag.reverse {
+    flex-direction: row-reverse; /* inverte imagem e texto */
+}
+
+.projects .card-image {
+    flex: 1 1 400px;
+    text-align: center;
+}
+
+.projects .card-image img {
+    width: 100%;
+    max-width: 500px; /* aumenta o tamanho das imagens */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.5s ease;
+}
+
+.projects .card-image img:hover {
+    transform: scale(1.05);
+}
+
+.projects .card-content {
+    flex: 1 1 400px;
+}
+
+@media (max-width: 768px) {
+    .projects .card.zigzag,
+    .projects .card.zigzag.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .projects .card-content {
+        margin-top: 20px;
+    }
+}
