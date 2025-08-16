@@ -48,10 +48,29 @@ p {
     margin: 14px;
 }
 
-.menu {
-    list-style: none;
+
+/* Header e menu */
+.header-nav {
     display: flex;
-    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    position: relative;
+}
+
+/* Logo */
+.header-nav .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Links do menu */
+.menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .menu a {
@@ -63,6 +82,91 @@ p {
 .menu a:hover {
     color: var(--primary);
 }
+
+.menu a.active {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* Botão toggle do menu */
+.menu-toggle {
+    display: none;  /* visível apenas no mobile */
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* --- MENU MOBILE --- */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        display: none;          /* escondido por padrão */
+        position: absolute;
+        top: 60px;              /* ajusta conforme altura do header */
+        right: 20px;
+        background: var(--background);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        flex-direction: column;
+        gap: 15px;
+        width: 200px;
+        z-index: 100;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+}
+
+/* Transição suave nos links do menu */
+.menu a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efeito hover */
+.menu a:hover {
+    color: var(--primary);
+    transform: translateY(-2px); /* leve subida ao passar o mouse */
+}
+
+
+/* DESKTOP - menu sempre visível */
+@media (min-width: 769px) {
+    .menu {
+        display: flex !important;
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+/* Dark mode */
+body.dark {
+    --background: #1e1e1e;
+    --text-color: #ddd;
+    --primary: #4da3ff;
+}
+
+body.dark .header-nav {
+    background: #1e1e1e;
+}
+
+body.dark .menu a {
+    color: var(--text-color);
+}
+
+body.dark .menu a:hover {
+    color: var(--primary);
+}
+
+
 
 .hero {
     display: flex;
@@ -325,7 +429,7 @@ body.dark header {
     font-style: italic;
     font-weight: 800;
     margin-bottom: 12px;
-    color: #0056b3;
+    color: #0065d2;
 }
 
 .blog-detalhes .detalhe-item p {
@@ -342,3 +446,89 @@ body.dark header {
     }
 }
 
+/* Container principal da seção */
+.about {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Título principal */
+.about-title {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: var(--primary);
+    text-align: center;
+}
+
+/* Descrição */
+.about-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    text-align: center;
+}
+
+/* Subtítulos das seções internas */
+.about-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Lista de habilidades */
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.skill-item {
+    background: var(--background-secondary);
+    color: var(--text-color);
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    font-weight: 500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Contatos */
+.about-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.contact-link {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: var(--secondary);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .skills-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}

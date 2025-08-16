@@ -12,37 +12,52 @@
 
     <!-- Cabeçalho -->
     <header>
-        <nav class="container">
-            <h1 class="logo">Dev Noshi</h1>
-            <button class="menu-toggle">☰</button>
-            <ul class="menu">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="portfolio.html">Portfólio</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="sobre.html">Sobre Mim</a></li>
-            </ul>
-            <button id="theme-toggle">🌙</button>
-        </nav>
-    </header>
+    <nav class="container header-nav">
+        <h1 class="logo">Dev Noshi</h1>
 
-    <!-- Sobre Mim -->
-    <section class="container">
-        <h2>Sobre Mim</h2>
-        <p>Sou Luck Noshi, desenvolvedor web com foco em criar experiências digitais seguras, funcionais e com design
-            limpo. Tenho experiência em HTML5, CSS3, JavaScript e fundamentos de segurança na web.</p>
+        <!-- Botão toggle do menu -->
+        <button class="menu-toggle">☰</button>
 
-        <h3>Minhas habilidades</h3>
-        <ul>
-            <li>HTML5, CSS3, JavaScript</li>
-            <li>Segurança na Web</li>
-            <li>APIs e Integrações</li>
-            <li>Design Responsivo</li>
+        <!-- Menu principal -->
+        <ul class="menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="portfolio.html">Portfólio</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="sobre.html">Sobre Mim</a></li>
         </ul>
 
-        <h3>Contato</h3>
-        <p>Email: <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a></p>
-        <p>GitHub: <a href="#" target="_blank">github.com/SeuUsuario</a></p>
-    </section>
+        <!-- Toggle do tema -->
+        <button id="theme-toggle">🌙</button>
+    </nav>
+</header>
+
+    <!-- Sobre Mim -->
+<section class="about container">
+    <div class="about-intro">
+        <h2 class="about-title">Sobre Mim</h2>
+        <p class="about-description">
+            Sou Luck Noshi, desenvolvedor web com foco em criar experiências digitais seguras, funcionais e com design limpo.
+            Tenho experiência em HTML5, CSS3, JavaScript e fundamentos de segurança na web.
+        </p>
+    </div>
+
+    <div class="about-skills">
+        <h3 class="about-subtitle">Minhas habilidades</h3>
+        <ul class="skills-list">
+            <li class="skill-item">HTML5, CSS3, JavaScript</li>
+            <li class="skill-item">Segurança na Web</li>
+            <li class="skill-item">APIs e Integrações</li>
+            <li class="skill-item">Design Responsivo</li>
+        </ul>
+    </div>
+
+    <div class="about-contact">
+        <h3 class="about-subtitle">Contato</h3>
+        <p>Email: <a href="mailto:seuemail@exemplo.com" class="contact-link">seuemail@exemplo.com</a></p>
+        <p>GitHub: <a href="#" target="_blank" class="contact-link">github.com/SeuUsuario</a></p>
+    </div>
+</section>
+
 
     <!-- Rodapé -->
     <footer>
