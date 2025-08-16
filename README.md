@@ -1,116 +1,76 @@
-Dev Noshi | Portfólio de Desenvolvimento Web
-Descrição
+# Portfólio Dev Noshi
 
-Portfólio pessoal para exibir projetos, artigos e informações sobre Luck Noshi, desenvolvedor web.
-Focado em design minimalista, clean e profissional, com HTML5, CSS3 e JavaScript.
+Este repositório contém o site pessoal e portfólio do **Dev Noshi**, desenvolvido com HTML5, CSS3 e JavaScript. O site apresenta informações sobre o desenvolvedor, projetos realizados e blog com artigos.
 
-Estrutura do Projeto
-/projeto-portfolio
-  ├── index.html
-  ├── portfolio.html
-  ├── blog.html
-  ├── sobre.html
-  ├── /css
-  │     └── style.css
-  ├── /js
-  │     └── script.js
-  └── /img
-        └── (imagens do site e dos projetos)
+---
 
-Checklist de Funcionalidades
-🟢 Geral
+## Estrutura do Projeto
 
- Layout responsivo (desktop, tablet, mobile)
+- `index.html` – Página principal
+- `portfolio.html` – Página de portfólio
+- `blog.html` – Página de blog
+- `sobre.html` – Página Sobre Mim
+- `css/style.css` – Estilos gerais
+- `js/script.js` – Menu mobile e toggle de tema
+- `imgs/` – Imagens do site
+- `README.md` – Este arquivo
 
- Design minimalista e clean
+---
 
- Dark mode / Light mode toggle funcionando
+## Funcionalidades e Alterações Principais
 
- Menu mobile com toggle e fechamento ao clicar fora
+### Menu e Navegação
+- Menu responsivo com botão toggle para mobile.
+- Fechamento automático ao clicar fora do menu.
+- Classes envolvidas: `.menu-toggle`, `.menu`, `.show`, `.header-nav`.
 
- SEO básico (tags semânticas e atributos alt)
+### Modo Dark / Light Persistente
+- Botão toggle (`#theme-toggle`) alterna entre temas claro e escuro.
+- Persistência do tema usando **localStorage**.
 
- Estrutura de pastas organizada
+### Banner Inicial
+- Nova div `.banner-container` com imagem (`.banner-image`) cobrindo toda a largura.
+- Hover suave com leve zoom.
+- Responsivo em todas as telas.
 
-📄 Páginas
+### Hero Section
+- Hero redesenhado com layout profissional:
+  - `.hero-content` (container flexível)
+  - `.hero-text` (título, descrição e botão)
+  - `.hero-image` (imagem decorativa)
+- Responsivo: empilha conteúdo no mobile.
 
-- index.html
+### Projetos em Destaque
+- Cards de projeto otimizados:
+  - `.card-image` → imagem
+  - `.card-content` → título, descrição e botão
+- Layout responsivo e clean.
+- Classes originais mantidas: `.grid`, `.card`, `.btn-portfolio`.
 
- Hero section com apresentação
+### Blog
+- Cards com título, descrição e botão “Ler artigo”.
+- Classes novas: `.blog-detalhes`, `.detalhe-item`.
+- Layout vertical e responsivo.
 
- Destaque de projetos recentes
+### Sobre Mim
+- Estrutura profissional com habilidades e contatos.
+- Classes novas adicionadas para organização sem impactar CSS existente.
 
- Botão “Ver Portfólio” funcional
+---
 
- Layout responsivo
+## Possíveis Melhorias Futuras
 
-- portfolio.html
+- Adicionar **animações suaves** ao scroll e transições de cards.
+- Implementar **lazy loading** para imagens, melhorando performance.
+- Criar uma **seção de depoimentos ou feedbacks** de clientes/projetos.
+- Adicionar **SEO básico** e meta tags para redes sociais.
+- Integrar **formulário de contato funcional** com backend ou email direto.
+- Melhorar **acessibilidade** (contrast ratio, navegação via teclado, ARIA labels).
 
- Todos os projetos listados em cards
+---
 
- Cards com imagem, título, breve descrição e botão “Ver Projeto”
+## Como Executar
 
- Hover suave nos cards
-
- Layout responsivo
-
-- blog.html
-
- Lista de artigos / tutoriais
-
- Títulos e descrições organizadas
-
- Links “Ler artigo” funcionando
-
- Layout responsivo
-
-- sobre.html
-
- Informações sobre o desenvolvedor
-
- Habilidades listadas
-
- Contatos (email e GitHub)
-
- Layout responsivo
-
-💻 Funcionalidades JS
-
- Dark mode toggle
-
- Menu mobile toggle
-
- Fechamento do menu ao clicar fora
-
-Tecnologias Utilizadas
-
-HTML5 – Estrutura semântica e conteúdo
-
-CSS3 – Layout, responsividade, animações, dark mode
-
-JavaScript – Funcionalidade interativa (dark mode e menu mobile)
-
-Uso e Manutenção
-
-Clone o projeto:
-
-git clone https://github.com/seuusuario/projeto-portfolio.git
-
-
-Abra index.html no navegador.
-
-Adicione suas imagens e textos de projetos, artigos e informações pessoais.
-
-Marque os itens do checklist conforme for concluindo.
-
-Observações
-
-O projeto é modular e fácil de manter, podendo adicionar novos projetos ou páginas sem alterar o layout existente.
-
-Futuras melhorias podem incluir:
-
-Cards de projetos com tech stack e links externos
-
-Pequenas animações adicionais
-
-Integração com CMS leve para artigos do blog
+1. Clone o repositório:
+```bash
+git clone https://github.com/SeuUsuario/portfolio-dev-noshi.git

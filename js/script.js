@@ -1,26 +1,28 @@
-// --- Toggle do tema ---
+// Seleciona o botão do tema
 const themeToggle = document.getElementById('theme-toggle');
 
-themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-    themeToggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
-});
-
-// --- Menu Mobile ---
-const menuToggle = document.querySelector('.menu-toggle');
-const menu = document.querySelector('.menu');
-
-if (menuToggle && menu) {
-    // Abrir/fechar menu ao clicar no botão
-    menuToggle.addEventListener('click', (e) => {
-        e.stopPropagation(); // evita fechar instantaneamente
-        menu.classList.toggle('show');
-    });
-
-    // Fechar menu ao clicar fora
-    document.addEventListener('click', (event) => {
-        if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
-            menu.classList.remove('show');
-        }
-    });
+// Função para aplicar tema
+function applyTheme(theme) {
+    if (theme === 'dark') {
+        document.body.classList.add('dark');
+        themeToggle.textContent = '☀️';
+    } else {
+        document.body.classList.remove('dark');
+        themeToggle.textContent = '🌙';
+    }
 }
+
+// Checa se há tema salvo no localStorage
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+    applyTheme(savedTheme);
+}
+
+// Alterna tema ao clicar no botão
+themeToggle.addEventListener('click', () => {
+    const isDark = document.body.classList.toggle('dark');
+    themeToggle.textContent = isDark ? '☀️' : '🌙';
+    
+    // Salva a escolha no localStorage
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+});
