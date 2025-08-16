@@ -1,6 +1,6 @@
 # Portfólio Dev Noshi
 
-Este repositório contém o site pessoal e portfólio do **Dev Noshi**, desenvolvido com HTML5, CSS3 e JavaScript. O site apresenta informações sobre o desenvolvedor, projetos realizados e blog com artigos.
+Este repositório contém meu site pessoal e portfólio, desenvolvido com HTML5, CSS3 e JavaScript. O site apresenta informações sobre projetos realizados e blog com artigos.
 
 ---
 
