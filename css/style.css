@@ -584,6 +584,7 @@ body.dark header {
 }
 
 .projects .card-image img {
+    margin: 15px;
     width: 100%;
     max-width: 500px; /* aumenta o tamanho das imagens */
     border-radius: 12px;
