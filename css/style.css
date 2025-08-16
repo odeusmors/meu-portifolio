@@ -485,11 +485,11 @@ body.dark header {
 
 /* Subtítulos das seções internas */
 .about-subtitle {
+    text-align: center;
     font-size: 1.5rem;
     margin-bottom: 10px;
     color: var(--primary);
     border-bottom: 2px solid var(--primary);
-    display: inline-block;
     padding-bottom: 5px;
 }
 
