@@ -1,6 +1,4 @@
-// ==========================
-// TOGGLE TEMA
-// ==========================
+// Toggle tema
 const themeToggle = document.getElementById('theme-toggle');
 
 function applyTheme(theme) {
@@ -22,9 +20,7 @@ themeToggle.addEventListener('click', () => {
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
 });
 
-// ==========================
-// MENU MOBILE
-// ==========================
+// Menu Mobile
 const menuToggle = document.querySelector('.menu-toggle');
 const menu = document.querySelector('.menu');
 
@@ -40,27 +36,19 @@ if (menuToggle && menu) {
     });
 }
 
-// ==========================
-// HERO PARALLAX
-// ==========================
-const heroImage = document.querySelector('.hero-image img');
-window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    if(heroImage) heroImage.style.transform = `translateY(${scrollY * 0.2}px)`;
-});
-
-// ==========================
-// SCROLL REVEAL
-// ==========================
+// Scroll Reveal
 const scrollItems = document.querySelectorAll('.hero-text, .hero-image, .card, .skill-card, .detalhe-item, h3');
 
-const revealOnScroll = () => {
-    const windowHeight = window.innerHeight;
+function revealOnScroll() {
+    const triggerBottom = window.innerHeight * 0.85;
+
     scrollItems.forEach(item => {
-        const revealTop = item.getBoundingClientRect().top;
-        if(revealTop < windowHeight - 100) item.classList.add('show');
+        const itemTop = item.getBoundingClientRect().top;
+        if(itemTop < triggerBottom){
+            item.classList.add('show');
+        }
     });
-};
+}
 
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
