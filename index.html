@@ -7,7 +7,6 @@
     <title>Dev Noshi | Desenvolvedor Web</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="imgs/icon-web.png" type="image/png">
-
 </head>
 
 <body>
@@ -16,38 +15,32 @@
     <header>
         <nav class="container header-nav">
             <h1 class="logo">Dev Noshi</h1>
-
-            <!-- Botão toggle do menu -->
             <button class="menu-toggle">☰</button>
-
-            <!-- Menu principal -->
             <ul class="menu">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="portfolio.html">Portfólio</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="sobre.html">Sobre Mim</a></li>
+                <li><a href="#hero">Início</a></li>
+                <li><a href="#projects">Portfólio</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#about">Sobre Mim</a></li>
+                <li><a href="#contact">Contato</a></li>
             </ul>
-
-            <!-- Toggle do tema -->
-            <button id="theme-toggle">🌙</button>
+            <button id="theme-toggle">🌙</button> 
         </nav>
     </header>
-    <!-- Banner Inicial -->
-    <div class="banner-container">
-        <img src="imgs/banner.png" alt="Banner Inicial" class="banner-image">
-    </div>
-    <!-- Hero -->
-    <section class="hero container">
+
+    <!-- HERO / BANNER -->
+    <section class="hero container" id="hero">
         <div class="hero-text">
             <h2>Olá, sou Dev Noshi</h2>
-            <p>Desenvolvedor Web focado em criar soluções modernas e seguras para a web.</p>
-            <a href="portfolio.html" class="btn-portfolio" target="_blank">Ver Portfólio</a>
+            <p>Desenvolvedor Web focado em criar soluções modernas, seguras e funcionais para a web.</p>
+            <a href="#projects" class="btn-portfolio">Ver Portfólio</a>
+        </div>
+        <div class="hero-image">
+            <img src="imgs/banner.png" alt="Banner Inicial">
         </div>
     </section>
 
-    <!-- Projetos em destaque -->
-    <!-- Projetos em destaque -->
-    <section class="projects container">
+    <!-- PROJETOS / PORTFÓLIO -->
+    <section class="projects container" id="projects">
         <h3>Projetos Recentes</h3>
 
         <div class="card zigzag">
@@ -56,9 +49,8 @@
             </div>
             <div class="card-content">
                 <h3>Projeto Lista-de-Tarefas</h3>
-                <p>Tecnologias utilizadas no projeto: <b>HTML5/CSS3/JAVASCRIPT.</b></p>
-                <a href="https://odeusmors.github.io/lista-de-tarefas" class="btn-portfolio" target="_blank">Ver
-                    Mais</a>
+                <p>Tecnologias: <b>HTML5 / CSS3 / JavaScript</b></p>
+                <a href="https://odeusmors.github.io/lista-de-tarefas" class="btn-portfolio" target="_blank">Ver Mais</a>
             </div>
         </div>
 
@@ -68,7 +60,7 @@
             </div>
             <div class="card-content">
                 <h3>Projeto Galeria-de-Imagens</h3>
-                <p>Tecnologias utilizadas no projeto: <b>HTML5/CSS3/JAVASCRIPT.</b></p>
+                <p>Tecnologias: <b>HTML5 / CSS3 / JavaScript</b></p>
                 <a href="https://odeusmors.github.io/galeria-imagens" class="btn-portfolio" target="_blank">Ver Mais</a>
             </div>
         </div>
@@ -79,14 +71,69 @@
             </div>
             <div class="card-content">
                 <h3>Projeto Loja de Roupas</h3>
-                <p>Tecnologias utilizadas no projeto: <b>HTML5/CSS3/JAVASCRIPT.</b></p>
+                <p>Tecnologias: <b>HTML5 / CSS3 / JavaScript</b></p>
                 <a href="https://odeusmors.github.io/site-roupas" class="btn-portfolio" target="_blank">Ver Mais</a>
             </div>
         </div>
     </section>
 
+    <!-- SKILLS / HABILIDADES -->
+    <section class="about container" id="about">
+        <h3>Minhas Habilidades</h3>
+        <div class="skills-grid">
+            <div class="skill-card">HTML5</div>
+            <div class="skill-card">CSS3</div>
+            <div class="skill-card">JavaScript</div>
+            <div class="skill-card">Segurança Web</div>
+            <div class="skill-card">APIs e Integrações</div>
+            <div class="skill-card">Design Responsivo</div>
+        </div>
+    </section>
 
-    <!-- Rodapé -->
+    <!-- SOBRE MIM -->
+    <section class="about container">
+        <h3>Sobre Mim</h3>
+        <p>Sou Dev Noshi, desenvolvedor web apaixonado por tecnologia e inovação. Crio projetos limpos, funcionais e com excelente experiência de usuário.</p>
+    </section>
+
+    <!-- BLOG -->
+    <section class="blog-detalhes container" id="blog">
+        <h3>Blog / Conteúdos</h3>
+        <div class="detalhes-container">
+            <article class="detalhe-item">
+                <h3>Como proteger seu site contra ataques XSS</h3>
+                <p><b>Cross Site Scripting (XSS)</b> — Práticas para manter seu site seguro: validação de entradas, escape de dados e cabeçalhos de segurança.</p>
+                <a href="https://owasp.org/www-community/attacks/xss" class="btn-portfolio" target="_blank">Saiba Mais</a>
+            </article>
+
+            <article class="detalhe-item">
+                <h3>Guia de HTML5 para iniciantes</h3>
+                <p>Conheça as principais tags do HTML5 e boas práticas para criar páginas acessíveis e bem organizadas.</p>
+                <a href="https://www.w3schools.com/html/html_intro.asp" class="btn-portfolio" target="_blank">Saiba Mais</a>
+            </article>
+
+            <article class="detalhe-item">
+                <h3>CSS moderno: Flexbox e Grid</h3>
+                <p>Aprenda a organizar elementos de forma eficiente usando Flexbox e CSS Grid para layouts modernos.</p>
+                <a href="https://www.w3schools.com/css/css3_flexbox.asp" class="btn-portfolio" target="_blank">Saiba Mais</a>
+            </article>
+
+            <article class="detalhe-item">
+                <h3>O Que É JavaScript</h3>
+                <p>JavaScript permite interatividade em sites: menus, formulários, slides, jogos e até aplicações completas no servidor.</p>
+                <a href="https://www.w3schools.com/js/js_intro.asp" class="btn-portfolio" target="_blank">Saiba Mais</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="about container" id="contact">
+        <h3>Contato</h3>
+        <p>Email: <a href="mailto:odeusmors@protonmail.com" class="contact-link">odeusmors@protonmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/odeusmors" target="_blank" class="contact-link">Acessar meu Portfólio GitHub</a></p>
+    </section>
+
+    <!-- RODAPÉ -->
     <footer>
         <p>&copy; 2025 Dev Noshi. Todos os direitos reservados.</p>
     </footer>
