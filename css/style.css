@@ -43,6 +43,13 @@ h2, h3 {
     font-family: emoji, sans-serif, Arial, Helvetica;
 }
 
+p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    margin: 20px;
+    font-family: emoji, sans-serif, Arial, Helvetica;
+}
+
 /* ==========================
 HEADER
 ========================== */
@@ -324,6 +331,7 @@ BUTTONS
     border-radius: 12px;
     font-weight: 600;
     transition: all 0.4s ease;
+    margin: 10px;
 }
 
 .btn-portfolio:hover {
