@@ -68,9 +68,3 @@ Este repositório contém meu site pessoal e portfólio, desenvolvido com HTML5,
 - Melhorar **acessibilidade** (contrast ratio, navegação via teclado, ARIA labels).
 
 ---
-
-## Como Executar
-
-1. Clone o repositório:
-```bash
-git clone https://github.com/SeuUsuario/portfolio-dev-noshi.git
