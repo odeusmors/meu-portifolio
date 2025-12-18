@@ -1,4 +1,4 @@
-# Portfólio Dev Noshi
+# Portfólio odeusmors
 
 Este repositório contém meu site pessoal e portfólio, desenvolvido com HTML5, CSS3 e JavaScript. O site apresenta informações sobre projetos realizados e blog com artigos.
 
