@@ -130,3 +130,85 @@ if (typeTarget) {
         setTimeout(typeEffect, 800);
     });
 }
+
+// ==========================================
+// LÓGICA DO DROID (INTERAÇÃO E MOVIMENTO)
+// ==========================================
+const glitch = document.getElementById('glitch-overlay');
+const term = document.getElementById('terminal-text');
+
+// Monitorar inatividade (se o usuário parar de ler, o sistema "dorme")
+let idleTime = 0;
+setInterval(() => {
+    idleTime++;
+    if (idleTime > 10) {
+        term.textContent = "SYS: Usuário inativo. Iniciando ciclo de economia de energia...";
+        document.body.style.filter = "grayscale(80%)";
+    }
+}, 1000);
+
+document.addEventListener('mousemove', () => {
+    idleTime = 0;
+    document.body.style.filter = "none";
+});
+
+// Efeito de "Click Frenesi" (se o usuário clicar muito rápido)
+let clickCount = 0;
+document.addEventListener('click', () => {
+    clickCount++;
+    if (clickCount > 10) {
+        glitch.style.opacity = "1";
+        term.textContent = "ALERTA: SOBRECARGA DE EVENTOS DETECTADA!";
+        setTimeout(() => {
+            glitch.style.opacity = "0";
+            clickCount = 0;
+        }, 500);
+    }
+});
+
+// Tecla secreta "Konami Code" para "Hackear" o site
+let kCode = "";
+const secret = "hack";
+document.addEventListener('keydown', (e) => {
+    kCode += e.key;
+    if (kCode.includes(secret)) {
+        alert("ACESSO CONCEDIDO: Protocolo Admin Ativado.");
+        document.body.style.background = "black";
+        term.textContent = "SYS: HACKED BY ADMIN";
+        kCode = "";
+    }
+});
+
+const consoleUI = document.getElementById('god-console');
+const cmdInput = document.getElementById('command-line');
+
+// Atalho: CTRL + K abre o terminal
+window.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && e.key === 'k') {
+        e.preventDefault();
+        consoleUI.classList.remove('hidden');
+        cmdInput.focus();
+    }
+    if (e.key === 'Escape') consoleUI.classList.add('hidden');
+});
+
+cmdInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        const cmd = cmdInput.value.trim().toLowerCase();
+        
+        // Interpretação dos comandos
+        if (cmd === 'theme-light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+        } else if (cmd === 'glitch') {
+            document.body.classList.add('glitch-active');
+            setTimeout(() => document.body.classList.remove('glitch-active'), 2000);
+        } else if (cmd === 'speed') {
+            document.documentElement.style.setProperty('--scan-speed', '0.5s');
+        } else if (cmd === 'clear') {
+            cmdInput.value = '';
+        }
+        
+        consoleUI.classList.add('hidden');
+        cmdInput.value = '';
+    }
+});
