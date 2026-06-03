@@ -1,162 +1,270 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev Noshi | Desenvolvedor Web</title>
+    <title>Dev Noshi | Cyber-Interface & Web Developer</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="imgs/icon-web.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body>
+    <div class="cyber-overlay"></div>
+    <div class="scanlines"></div>
 
-    <!-- Cabeçalho -->
-    <header>
+    <div class="cyber-bg"></div>
+
+    <header class="cyber-header">
         <nav class="container header-nav">
-            <h1 class="logo">Dev Noshi</h1>
-            <button class="menu-toggle">☰</button>
+            <div class="logo-area">
+                <span class="cyber-glitch-core" data-text="DEV_NOSHI">DEV_NOSHI</span>
+                <span class="status-indicator online"></span>
+            </div>
+            <button class="menu-toggle" aria-label="Abrir Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
             <ul class="menu">
-                <li><a href="#hero">Início</a></li>
-                <li><a href="#projects">Portfólio</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#about">Sobre Mim</a></li>
-                <li><a href="#contact">Contato</a></li>
+                <li><a href="#hero" class="nav-link-cyber"><span class="nav-num">01.</span> Início</a></li>
+                <li><a href="#projects" class="nav-link-cyber"><span class="nav-num">02.</span> Portfólio</a></li>
+                <li><a href="#about" class="nav-link-cyber"><span class="nav-num">03.</span> Habilidades</a></li>
+                <li><a href="#blog" class="nav-link-cyber"><span class="nav-num">04.</span> Core_Dump</a></li>
+                <li><a href="#contact" class="nav-link-cyber"><span class="nav-num">05.</span> Contato</a></li>
             </ul>
-            <button id="theme-toggle">🌙</button> 
+            <button id="theme-toggle" class="cyber-btn-icon" aria-label="Mudar Tema">
+                <i class="fa-solid fa-moon"></i>
+            </button> 
         </nav>
+        <div class="header-laser-line"></div>
     </header>
 
-    <!-- HERO / BANNER -->
     <section class="hero container" id="hero">
         <div class="hero-text">
-            <h2>Olá, sou Dev Noshi</h2>
-            <p>Desenvolvedor Web focado em criar soluções modernas, seguras e funcionais para a web.</p>
-            <a href="#projects" class="btn-portfolio">Ver Portfólio</a>
+            <div class="cyber-badge">SYSTEM_STATUS: ACTIVE</div>
+            <h2 class="hero-title">Olá, eu sou <span class="highlight-neon">Dev Noshi</span></h2>
+            <h3 class="dynamic-typing">&gt; <span class="type-target">Desenvolvedor Web</span>_</h3>
+            <p class="hero-description">
+                Especialista em arquitetar interfaces digitais modernas, sistemas seguros e experiências web imersivas de alta performance.
+            </p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn-cyber main-btn">
+                    <span class="btn-text">INICIAR_EXPLORAÇÃO</span>
+                    <span class="btn-glitch"></span>
+                </a>
+            </div>
         </div>
-        <div class="hero-image">
-            <img src="imgs/banner.png" alt="Banner Inicial">
+        <div class="hero-image-wrapper">
+            <div class="cyber-frame">
+                <span class="corner tl"></span><span class="corner tr"></span>
+                <span class="corner bl"></span><span class="corner br"></span>
+                <img src="imgs/banner.png" alt="Cyberpunk Banner Interface" class="hero-img">
+            </div>
         </div>
     </section>
 
-    <!-- PROJETOS / PORTFÓLIO -->
     <section class="projects container" id="projects">
-        <h3>Projetos Recentes</h3>
-
-        <div class="card zigzag">
-            <div class="card-image">
-                <img src="imgs/perfil-projeto1.png" alt="Projeto 1">
-            </div>
-            <div class="card-content">
-                <h3>Projeto Lista-de-Tarefas</h3>
-                <p>Tecnologias: <b>HTML5 / CSS3 / JavaScript</b></p>
-                <a href="https://odeusmors.github.io/lista-de-tarefas" class="btn-portfolio" target="_blank">Ver Mais</a>
-            </div>
+        <div class="section-title-wrap">
+            <span class="section-tag">// MODULE_02</span>
+            <h3 class="section-title">Repositório de Projetos</h3>
         </div>
 
-        <div class="card zigzag reverse">
-            <div class="card-image">
-                <img src="imgs/perfil-projeto2.png" alt="Projeto 2">
+        <div class="cyber-grid-projects">
+            <div class="cyber-card" data-tilt>
+                <div class="card-glow"></div>
+                <div class="card-image-box">
+                    <img src="imgs/perfil-projeto1.png" alt="Projeto 1">
+                    <div class="card-overlay-tech">
+                        <span><i class="fa-brands fa-js"></i> JS_CORE</span>
+                    </div>
+                </div>
+                <div class="card-cyber-content">
+                    <h4 class="project-name">Lista-de-Tarefas</h4>
+                    <p class="project-tech"><i class="fa-solid fa-code"></i> HTML5 / CSS3 / JavaScript</p>
+                    <div class="card-footer-actions">
+                        <a href="https://odeusmors.github.io/lista-de-tarefas" class="btn-card-cyber" target="_blank">
+                            <span>Acessar_Link <i class="fa-solid fa-terminal"></i></span>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="card-content">
-                <h3>Projeto Galeria-de-Imagens</h3>
-                <p>Tecnologias: <b>HTML5 / CSS3 / JavaScript</b></p>
-                <a href="https://odeusmors.github.io/galeria-imagens" class="btn-portfolio" target="_blank">Ver Mais</a>
-            </div>
-        </div>
 
-        <div class="card zigzag">
-            <div class="card-image">
-                <img src="imgs/perfil-projeto4.png" alt="Projeto 3">
+            <div class="cyber-card" data-tilt>
+                <div class="card-glow"></div>
+                <div class="card-image-box">
+                    <img src="imgs/perfil-projeto2.png" alt="Projeto 2">
+                    <div class="card-overlay-tech">
+                        <span><i class="fa-solid fa-images"></i> RENDERING</span>
+                    </div>
+                </div>
+                <div class="card-cyber-content">
+                    <h4 class="project-name">Galeria-de-Imagens</h4>
+                    <p class="project-tech"><i class="fa-solid fa-code"></i> HTML5 / CSS3 / JavaScript</p>
+                    <div class="card-footer-actions">
+                        <a href="https://odeusmors.github.io/galeria-imagens" class="btn-card-cyber" target="_blank">
+                            <span>Acessar_Link <i class="fa-solid fa-terminal"></i></span>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="card-content">
-                <h3>Projeto Loja de Roupas</h3>
-                <p>Tecnologias: <b>HTML5 / CSS3 / JavaScript</b></p>
-                <a href="https://odeusmors.github.io/site-roupas" class="btn-portfolio" target="_blank">Ver Mais</a>
+
+            <div class="cyber-card" data-tilt>
+                <div class="card-glow"></div>
+                <div class="card-image-box">
+                    <img src="imgs/perfil-projeto4.png" alt="Projeto 3">
+                    <div class="card-overlay-tech">
+                        <span><i class="fa-solid fa-cart-shopping"></i> E-COMMERCE</span>
+                    </div>
+                </div>
+                <div class="card-cyber-content">
+                    <h4 class="project-name">Loja de Roupas</h4>
+                    <p class="project-tech"><i class="fa-solid fa-code"></i> HTML5 / CSS3 / JavaScript</p>
+                    <div class="card-footer-actions">
+                        <a href="https://odeusmors.github.io/site-roupas" class="btn-card-cyber" target="_blank">
+                            <span>Acessar_Link <i class="fa-solid fa-terminal"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cyber-card" data-tilt>
+                <div class="card-glow"></div>
+                <div class="card-image-box">
+                    <img src="imgs/perfil-projeto3.png" alt="Projeto 4">
+                    <div class="card-overlay-tech">
+                        <span><i class="fa-solid fa-calculator"></i> ALGORITHM</span>
+                    </div>
+                </div>
+                <div class="card-cyber-content">
+                    <h4 class="project-name">Calculadora IMC</h4>
+                    <p class="project-tech"><i class="fa-solid fa-code"></i> HTML5 / CSS3 / JavaScript</p>
+                    <div class="card-footer-actions">
+                        <a href="https://github.com/odeusmors/calculadora-imc" class="btn-card-cyber" target="_blank">
+                            <span>Ver_Código <i class="fa-brands fa-github"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cyber-card" data-tilt>
+                <div class="card-glow"></div>
+                <div class="card-image-box">
+                    <img src="imgs/perfil-projeto5.png" alt="Projeto 5">
+                    <div class="card-overlay-tech">
+                        <span><i class="fa-solid fa-money-bill-transfer"></i> API_FETCH</span>
+                    </div>
+                </div>
+                <div class="card-cyber-content">
+                    <h4 class="project-name">Conversor de Moedas</h4>
+                    <p class="project-tech"><i class="fa-solid fa-code"></i> HTML5 / CSS3 / JavaScript</p>
+                    <div class="card-footer-actions">
+                        <a href="https://github.com/odeusmors/conversor-moedas" class="btn-card-cyber" target="_blank">
+                            <span>Ver_Código <i class="fa-brands fa-github"></i></span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="card zigzag reverse">
-            <div class="card-image">
-                <img src="imgs/perfil-projeto3.png" alt="Projeto 4">
-            </div>
-            <div class="card-content">
-                <h3>Projeto Calculadora IMC</h3>
-                <p>Tecnologias: <b>HTML5 / CSS3 / JavaScript</b></p>
-                <a href="https://github.com/odeusmors/calculadora-imc" class="btn-portfolio" target="_blank">Ver Mais</a>
-            </div>
-        </div>
-        <div class="card zigzag">
-            <div class="card-image">
-                <img src="imgs/perfil-projeto5.png" alt="Projeto 5">
-            </div>
-            <div class="card-content">
-                <h3>Projeto Conversor de Moedas</h3>
-                <p>Tecnologias: <b>HTML5 / CSS3 / JavaScript</b></p>
-                <a href="https://github.com/odeusmors/conversor-moedas" class="btn-portfolio" target="_blank">Ver Mais</a>
-            </div>
+    </section>
+
+    <section class="about container" id="about">
+        <div class="section-title-wrap">
+            <span class="section-tag">// MODULE_03</span>
+            <h3 class="section-title">Matriz de Habilidades</h3>
         </div>
         
-    </section>
-
-    <!-- SKILLS / HABILIDADES -->
-    <section class="about container" id="about">
-        <h3 class="card-content">Minhas Habilidades</h3>
         <div class="skills-grid">
-            <div class="skill-card">HTML5</div>
-            <div class="skill-card">CSS3</div>
-            <div class="skill-card">JavaScript</div>
-            <div class="skill-card">Segurança Web</div>
-            <div class="skill-card">APIs e Integrações</div>
-            <div class="skill-card">Design Responsivo</div>
+            <div class="skill-card-cyber"><i class="fa-brands fa-html5"></i> HTML5 <span class="matrix-code">01</span></div>
+            <div class="skill-card-cyber"><i class="fa-brands fa-css3-alt"></i> CSS3 <span class="matrix-code">02</span></div>
+            <div class="skill-card-cyber"><i class="fa-brands fa-square-js"></i> JavaScript <span class="matrix-code">03</span></div>
+            <div class="skill-card-cyber"><i class="fa-solid fa-shield-halved"></i> Segurança Web <span class="matrix-code">04</span></div>
+            <div class="skill-card-cyber"><i class="fa-solid fa-gears"></i> APIs / Integrações <span class="matrix-code">05</span></div>
+            <div class="skill-card-cyber"><i class="fa-solid fa-mobile-button"></i> UI/UX Responsivo <span class="matrix-code">06</span></div>
+        </div>
+
+        <div class="cyber-bio-box">
+            <div class="bio-header">
+                <i class="fa-solid fa-user-secret"></i> <span>IDENTITY_DATA: OVERVIEW</span>
+            </div>
+            <p>
+                Sou <strong>Dev Noshi</strong>, um arquiteto de software front-end focado em empurrar as barreiras da web moderna. Desenvolvo interfaces limpas, modulares e blindadas contra vulnerabilidades, garantindo interações fluidas com estética refinada de última geração.
+            </p>
         </div>
     </section>
 
-    <!-- SOBRE MIM -->
-    <section class="about container">
-        <h3 class="card-content">Sobre Mim</h3>
-        <p>Sou Dev Noshi, desenvolvedor web apaixonado por tecnologia e inovação. Crio projetos limpos, funcionais e com excelente experiência de usuário.</p>
-    </section>
-
-    <!-- BLOG -->
     <section class="blog-detalhes container" id="blog">
-        <h3 class="card-content">Blog / Conteúdos</h3>
+        <div class="section-title-wrap">
+            <span class="section-tag">// MODULE_04</span>
+            <h3 class="section-title">Logs & Artigos [Core_Dump]</h3>
+        </div>
+        
         <div class="detalhes-container">
-            <article class="detalhe-item">
-                <h3>Como proteger seu site contra ataques XSS</h3>
-                <p><b>Cross Site Scripting (XSS)</b> — Práticas para manter seu site seguro: validação de entradas, escape de dados e cabeçalhos de segurança.</p>
-                <a href="https://owasp.org/www-community/attacks/xss" class="btn-portfolio" target="_blank">Saiba Mais</a>
+            <article class="blog-cyber-card">
+                <div class="blog-time">SEC_LOG: #098</div>
+                <h4>Como proteger seu site contra ataques XSS</h4>
+                <p><b>Cross Site Scripting (XSS)</b> — Protocolos rígidos para mitigar injeções maliciosas: higienização de inputs, Contextual Escaping e Content Security Policy (CSP).</p>
+                <a href="https://owasp.org/www-community/attacks/xss" class="blog-link" target="_blank">Ler_Data_Stream <i class="fa-solid fa-arrow-right-long"></i></a>
             </article>
 
-            <article class="detalhe-item">
-                <h3>Guia de HTML5 para iniciantes</h3>
-                <p>Conheça as principais tags do HTML5 e boas práticas para criar páginas acessíveis e bem organizadas.</p>
-                <a href="https://www.w3schools.com/html/html_intro.asp" class="btn-portfolio" target="_blank">Saiba Mais</a>
+            <article class="blog-cyber-card">
+                <div class="blog-time">SEC_LOG: #064</div>
+                <h4>Guia de HTML5 Semântico</h4>
+                <p>Otimização de estruturas lógicas e indexação cibernética. Tags estruturais para acessibilidade limpa e arquitetura legível.</p>
+                <a href="https://www.w3schools.com/html/html_intro.asp" class="blog-link" target="_blank">Ler_Data_Stream <i class="fa-solid fa-arrow-right-long"></i></a>
             </article>
 
-            <article class="detalhe-item">
-                <h3>CSS moderno: Flexbox e Grid</h3>
-                <p>Aprenda a organizar elementos de forma eficiente usando Flexbox e CSS Grid para layouts modernos.</p>
-                <a href="https://www.w3schools.com/css/css3_flexbox.asp" class="btn-portfolio" target="_blank">Saiba Mais</a>
+            <article class="blog-cyber-card">
+                <div class="blog-time">SEC_LOG: #042</div>
+                <h4>CSS Avançado: Flexbox e Grid Matrix</h4>
+                <p>Manipulação de layouts complexos e designs tridimensionais responsivos sem depender de frameworks externos pesados.</p>
+                <a href="https://www.w3schools.com/css/css3_flexbox.asp" class="blog-link" target="_blank">Ler_Data_Stream <i class="fa-solid fa-arrow-right-long"></i></a>
             </article>
 
-            <article class="detalhe-item">
-                <h3>O Que É JavaScript</h3>
-                <p>JavaScript permite interatividade em sites: menus, formulários, slides, jogos e até aplicações completas no servidor.</p>
-                <a href="https://www.w3schools.com/js/js_intro.asp" class="btn-portfolio" target="_blank">Saiba Mais</a>
+            <article class="blog-cyber-card">
+                <div class="blog-time">SEC_LOG: #011</div>
+                <h4>O Universo do JavaScript Assíncrono</h4>
+                <p>Manipulação de Event Loops, Promises estruturadas e requisições dinâmicas para manter a interface em tempo de execução estável.</p>
+                <a href="https://www.w3schools.com/js/js_intro.asp" class="blog-link" target="_blank">Ler_Data_Stream <i class="fa-solid fa-arrow-right-long"></i></a>
             </article>
         </div>
     </section>
 
-    <!-- CONTATO -->
-    <section class="about container" id="contact">
-        <h3 class="card-content">Contato</h3>
-        <p>Email: <a href="mailto:odeusmors@protonmail.com" class="contact-link">odeusmors@protonmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/odeusmors" target="_blank" class="contact-link">Acessar meu Portfólio GitHub</a></p>
+    <section class="contact-section container" id="contact">
+        <div class="section-title-wrap">
+            <span class="section-tag">// MODULE_05</span>
+            <h3 class="section-title">Estabelecer Conexão</h3>
+        </div>
+        
+        <div class="cyber-contact-grid">
+            <div class="contact-method">
+                <div class="contact-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+                <div class="contact-info">
+                    <span class="label">SECURE_MAIL</span>
+                    <a href="mailto:odeusmors@protonmail.com" class="contact-link">odeusmors@protonmail.com</a>
+                </div>
+            </div>
+
+            <div class="contact-method">
+                <div class="contact-icon"><i class="fa-brands fa-github-alt"></i></div>
+                <div class="contact-info">
+                    <span class="label">NET_PROFILE</span>
+                    <a href="https://github.com/odeusmors" target="_blank" class="contact-link">github.com/odeusmors</a>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- RODAPÉ -->
-    <footer>
-        <p>&copy; 2025 Dev Noshi. Todos os direitos reservados.</p>
+    <footer class="cyber-footer">
+        <div class="footer-line"></div>
+        <div class="container footer-content">
+            <p>&copy; 2026 Dev Noshi. Terminal de Portfólio Protegido.</p>
+            <p class="system-version">SYS_VER: 4.0.1_STABLE</p>
+        </div>
     </footer>
 
     <script src="js/script.js"></script>
