@@ -620,3 +620,110 @@ ANIMAÇÃO DE IMAGENS GLITCH (ALEATÓRIA)
     75% { transform: translate(-2px, -5px); filter: hue-rotate(270deg); }
     100% { transform: translate(0, 0); filter: hue-rotate(360deg); }
 }
+
+/* Container de Grid para espaçamento */
+.detalhes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* O Cartão de Log */
+.blog-cyber-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-cyber);
+    padding: 2rem;
+    position: relative;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-cyber-card:hover {
+    border-color: var(--neon-cyan);
+    background: rgba(0, 243, 255, 0.05);
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.1);
+    transform: translateY(-5px);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.status-chip {
+    font-family: var(--font-code);
+    font-size: 0.6rem;
+    color: var(--neon-magenta);
+    border: 1px solid var(--neon-magenta);
+    padding: 2px 8px;
+}
+
+.blog-cyber-card h4 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: var(--text-bright);
+}
+
+.blog-cyber-card p {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    color: var(--text-main);
+}
+
+/* Link estilizado como terminal */
+.blog-link {
+    margin-top: auto;
+    font-family: var(--font-code);
+    color: var(--neon-cyan);
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.blog-link:hover {
+    text-shadow: 0 0 5px var(--neon-cyan);
+    letter-spacing: 1px;
+}
+
+.droid-container {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 60px;
+    height: 60px;
+    background: #00f3ff;
+    border-radius: 50% 50% 40% 40%;
+    z-index: 9999;
+    cursor: grab;
+    transition: transform 0.1s ease-out;
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.droid-eye {
+    width: 20px;
+    height: 20px;
+    background: #10101e;
+    border-radius: 50%;
+    animation: blink 3s infinite;
+}
+
+.droid-antenna {
+    position: absolute;
+    top: -15px;
+    width: 4px;
+    height: 20px;
+    background: #ff0055;
+    box-shadow: 0 0 10px #ff0055;
+}
+
+@keyframes blink {
+    0%, 90%, 100% { transform: scaleY(1); }
+    95% { transform: scaleY(0.1); }
+}
