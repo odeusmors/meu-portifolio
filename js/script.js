@@ -110,3 +110,32 @@ setInterval(() => {
 }, 1000);
 
 //
+
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("Sistema de Carrossel: Inicializado.");
+    
+    window.nsMove = function(direction) {
+        const track = document.getElementById('ns-carousel-track');
+        const slides = document.querySelectorAll('.ns-carousel-slide');
+        
+        if (!track || slides.length === 0) {
+            console.error("Erro: Track ou Slides não encontrados!");
+            return;
+        }
+
+        const slideWidth = 340; // 320px (card) + 20px (gap)
+        let currentTransform = track.style.transform;
+        let currentPos = currentTransform ? parseInt(currentTransform.replace(/[^\d-]/g, '')) : 0;
+        
+        // Calcula a nova posição
+        let newPos = currentPos - (direction * slideWidth);
+        
+        // Limites (impede de rolar para o vazio)
+        const maxScroll = -(slides.length - 1) * slideWidth;
+        if (newPos > 0) newPos = 0;
+        if (newPos < maxScroll) newPos = maxScroll;
+
+        track.style.transform = `translateX(${newPos}px)`;
+        console.log(`SYS: Movendo para ${newPos}px`);
+    };
+});

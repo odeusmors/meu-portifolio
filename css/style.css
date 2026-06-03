@@ -727,3 +727,47 @@ ANIMAÇÃO DE IMAGENS GLITCH (ALEATÓRIA)
     0%, 90%, 100% { transform: scaleY(1); }
     95% { transform: scaleY(0.1); }
 }
+
+/* Força o container a mostrar os itens lado a lado */
+.ns-carousel-wrapper {
+    width: 100% !important;
+    overflow: hidden !important;
+    position: relative;
+    padding: 2rem 0;
+}
+
+#ns-carousel-track {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 20px !important;
+    transition: transform 0.5s ease-in-out !important;
+    width: max-content !important;
+}
+
+.ns-carousel-slide {
+    flex: 0 0 320px !important; /* Largura fixa para cada card */
+}
+
+/* Força total para os containers do carrossel */
+.ns-carousel-slide {
+    flex: 0 0 320px !important;
+    width: 320px !important;
+    height: auto;
+    padding: 10px;
+}
+
+/* Garante que o card dentro do slide ocupe o espaço correto */
+.ns-carousel-slide .cyber-card {
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+}
+
+/* Corrige as imagens especificamente para esta seção */
+.ns-carousel-slide img {
+    width: 100% !important;
+    height: 200px !important; /* Ajuste a altura conforme necessário */
+    object-fit: cover !important;
+    display: block !important;
+}
